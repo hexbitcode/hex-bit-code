@@ -23,9 +23,8 @@ export default function HeroSection() {
                         </h1>
 
                         {/* Subheading/Description */}
-                        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                            The ultimate platform for modern developers. Streamline your workflow with our comprehensive toolkit,
-                            AI-powered assistance, and collaborative features that transform how you code, deploy, and scale.
+                        <p className="text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0">
+                            Empower your projects with our cutting-edge tools and expert consulting services. Deliver high-quality software solutions with unparalleled speed and efficiency.
                         </p>
 
                         {/* CTA Buttons */}
