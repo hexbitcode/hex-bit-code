@@ -55,8 +55,8 @@ function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Email us</p>
-                  <a href="mailto:contact@hexbitcode.com" className="text-white hover:text-cyan-400 transition-colors">
-                    contact@hexbitcode.com
+                  <a href="mailto:info.hexbitcode@gmail.com" className="text-white hover:text-cyan-400 transition-colors">
+                    info.hexbitcode@gmail.com
                   </a>
                 </div>
               </div>
@@ -125,9 +125,7 @@ function Footer() {
               {[
                 { icon: Globe, label: "Web Development", color: "text-blue-400" },
                 { icon: Smartphone, label: "Mobile Apps", color: "text-purple-400" },
-                { icon: Code, label: "Custom Software", color: "text-cyan-400" },
                 { icon: Palette, label: "UI/UX Design", color: "text-pink-400" },
-                { icon: Layers, label: "DevOps", color: "text-green-400" },
                 { icon: Settings, label: "Maintenance", color: "text-yellow-400" },
               ].map((service, index) => (
                 <li key={index} className="group">
