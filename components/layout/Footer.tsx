@@ -1,6 +1,21 @@
 "use client";
 
-import {Code,Facebook, Folder,Globe, Home,Instagram, Layers,Palette, Phone, Smartphone,User,  MessageCircle,  Link2, Settings,
+import {
+  Code,
+  Facebook,
+  Folder,
+  Globe,
+  Home,
+  Instagram,
+  Layers,
+  Palette,
+  Phone,
+  Smartphone,
+  User,
+  MessageCircle,
+  Link2,
+  Settings,
+  Share2,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -63,37 +78,48 @@ function Footer() {
         </div>
 
         {/* Connect / Socials */}
-        <div className="flex flex-col gap-4 md:w-1/4">
-          <h2 className="flex items-center gap-2 font-semibold text-lg md:text-xl">
-            <User size={18} /> Connect
-          </h2>
-          <div className="flex flex-col gap-2">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-700 hover:bg-blue-600 transition-colors text-white text-sm"
-            >
-              <Facebook size={16} /> Facebook
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-700 hover:bg-pink-500 transition-colors text-white text-sm"
-            >
-              <Instagram size={16} /> Instagram
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-700 hover:bg-green-500 transition-colors text-white text-sm"
-            >
-              <MessageCircle size={16} /> WhatsApp
-            </a>
-          </div>
+        <div className="text-center sm:text-left md:w-1/4">
+          <h4 className="text-sm font-semibold mb-4 flex items-center gap-2 uppercase tracking-wide">
+            <Share2 size={16} className="text-accent" />
+            Connect
+          </h4>
+          <ul className="space-y-3 text-sm text-white/90">
+            <li className="flex items-center gap-2">
+              <Facebook size={16} className="text-accent/90" />
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition"
+              >
+                Facebook
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <MessageCircle size={16} className="text-accent/90" />
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition"
+              >
+                WhatsApp
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Instagram size={16} className="text-accent/90" />
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent transition"
+              >
+                Instagram
+              </a>
+            </li>
+          </ul>
         </div>
+
       </div>
 
       {/* Footer Bottom */}
