@@ -87,7 +87,7 @@ function Footer() {
             <li className="flex items-center gap-2">
               <Facebook size={16} className="text-accent/90" />
               <a
-                href="#"
+                href="https://www.facebook.com/hexbitcode"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition"
@@ -98,7 +98,7 @@ function Footer() {
             <li className="flex items-center gap-2">
               <MessageCircle size={16} className="text-accent/90" />
               <a
-                href="#"
+                href="https://wa.me/9779840642294"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition"
@@ -109,7 +109,7 @@ function Footer() {
             <li className="flex items-center gap-2">
               <Instagram size={16} className="text-accent/90" />
               <a
-                href="#"
+                href="https://www.instagram.com/hexbitcode/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition"
