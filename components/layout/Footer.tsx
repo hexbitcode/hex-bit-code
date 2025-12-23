@@ -28,7 +28,7 @@ function Footer() {
         {/* Brand Section */}
         <div className="flex flex-col justify-start space-y-4 md:w-1/3">
           <h2 className="font-bold text-3xl md:text-4xl">
-            Hexa <span className="text-emerald-400">Bit</span> Code
+            Hex<span className="text-emerald-400">Bit</span> Code
           </h2>
           <p className="text-base md:text-lg text-gray-300">
             Building clean, scalable, and efficient digital solutions for modern businesses.
