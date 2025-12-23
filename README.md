@@ -1,1 +1,4 @@
 # HexBitCode
+
+## Technologies used
+ - NextJS
