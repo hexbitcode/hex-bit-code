@@ -28,10 +28,10 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
+    <footer className="relative bg-linear-to-br from-gray-900 via-black to-gray-900 text-white overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-[0.02]"></div>
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-cyan-500/30 to-transparent"></div>
 
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -40,7 +40,7 @@ function Footer() {
           <div className="lg:col-span-4 space-y-6">
             <div>
               <h2 className="font-bold text-3xl md:text-4xl mb-3">
-                Hex<span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Bit</span>Code
+                Hex<span className="bg-linear-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">Bit</span>Code
               </h2>
               <p className="text-gray-300 text-base leading-relaxed max-w-md">
                 Building clean, scalable, and efficient digital solutions for modern businesses worldwide.
@@ -50,7 +50,7 @@ function Footer() {
             {/* Contact Info */}
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/10 to-emerald-500/10">
+                <div className="p-2 rounded-lg bg-linear-to-br from-cyan-500/10 to-emerald-500/10">
                   <Mail className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
@@ -62,7 +62,7 @@ function Footer() {
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10">
+                <div className="p-2 rounded-lg bg-linear-to-br from-purple-500/10 to-pink-500/10">
                   <MapPin className="w-5 h-5 text-purple-400" />
                 </div>
                 <div>
@@ -81,7 +81,7 @@ function Footer() {
                   placeholder="Your email"
                   className="flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:border-cyan-500 text-sm"
                 />
-                <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+                <button className="px-4 py-2 bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -130,7 +130,7 @@ function Footer() {
               ].map((service, index) => (
                 <li key={index} className="group">
                   <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300">
-                    <div className={`p-2 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 group-hover:from-gray-700 group-hover:to-gray-800`}>
+                    <div className={`p-2 rounded-lg bg-linear-to-br from-gray-800 to-gray-900 group-hover:from-gray-700 group-hover:to-gray-800`}>
                       <service.icon className={`w-4 h-4 ${service.color}`} />
                     </div>
                     <span className="text-sm text-gray-300 group-hover:text-white">{service.label}</span>
@@ -193,11 +193,11 @@ function Footer() {
             </div>
 
             {/* Call to Action */}
-            <div className="p-4 rounded-xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-gray-800">
+            <div className="p-4 rounded-xl bg-linear-to-br from-cyan-500/10 to-purple-500/10 border border-gray-800">
               <p className="text-sm text-gray-300 mb-3">Ready to start your project?</p>
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+                className="inline-flex items-center justify-center gap-2 w-full py-3 px-4 bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Free Consultation
                 <ArrowRight className="w-4 h-4" />
@@ -207,7 +207,7 @@ function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="my-10 h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
+        <div className="my-10 h-px bg-linear-to-r from-transparent via-gray-800 to-transparent"></div>
 
         {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
