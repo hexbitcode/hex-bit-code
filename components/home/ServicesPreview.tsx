@@ -1,17 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  BarChart, 
-  Zap,
+  Code,
   Globe,
   Palette,
-  Database,
-  Cpu
+  Database
 } from "lucide-react";
 
 const services = [
@@ -84,7 +79,7 @@ export default function ServicesPreview() {
           </h2>
           
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Comprehensive digital solutions tailored to transform your business and drive growth in the modern landscape.
+            Comprehensive digital solutions tailored to transform your business and drive growth in the modern landscape&apos;.
           </p>
           
           {/* Animated HR */}
@@ -101,7 +96,7 @@ export default function ServicesPreview() {
         
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
@@ -165,20 +160,26 @@ export default function ServicesPreview() {
           className="text-center mt-16"
         >
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center group">
+            <Link
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center justify-center group cursor-pointer"
+            >
               <span>Get Custom Quote</span>
               <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
-            </button>
+            </Link>
             
-            <button className="px-8 py-4 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-2xl group backdrop-blur-sm">
+            <Link
+              href="/services"
+              className="px-8 py-4 bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-2xl group backdrop-blur-sm cursor-pointer"
+            >
               View All Services
-            </button>
+            </Link>
           </div>
           
           <p className="text-gray-500 text-sm mt-6">
-            Need something specific? <span className="text-cyan-400 cursor-pointer hover:underline">Let's discuss your project</span>
+            Need something specific? <Link href="/contact" className="text-cyan-400 cursor-pointer hover:underline">Let&apos;s discuss your project</Link>
           </p>
         </motion.div>
       </div>
