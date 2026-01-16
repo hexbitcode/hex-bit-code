@@ -17,10 +17,10 @@ export default function Navbar() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -55,8 +55,8 @@ export default function Navbar() {
 
             {/* ✅ Get Quote CTA */}
             <Link
-              href="#contact"
-              className="ml-2 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/20"
+              href="/contact"
+              className="ml-2 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/20"
             >
               <Sparkles className="w-4 h-4" />
               Get Quote
@@ -107,9 +107,9 @@ export default function Navbar() {
 
               {/* Mobile Get Quote */}
               <Link
-                href="#contact"
+                href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-6 flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold"
+                className="mt-6 flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold"
               >
                 <Sparkles className="w-4 h-4" />
                 Get Quote
