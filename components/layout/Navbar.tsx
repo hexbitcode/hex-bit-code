@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronRight, Phone, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -33,23 +33,34 @@ export default function Navbar() {
           : "bg-gray-900/80 backdrop-blur-md border-b border-white/10"
       }`}
     >
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-16 lg:h-20 flex items-center justify-between">
+          
+          {/* Logo */}
           <Link href="/" className="text-xl lg:text-2xl font-bold text-white">
             Hex<span className="text-cyan-400">Bit</span>Code
           </Link>
 
-          {/* Desktop */}
-          <div className="hidden lg:flex gap-8 items-center">
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
             {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white"
+                className="text-gray-300 hover:text-white transition"
               >
                 {link.name}
               </Link>
             ))}
+
+            {/* ✅ Get Quote CTA */}
+            <Link
+              href="#contact"
+              className="ml-2 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/20"
+            >
+              <Sparkles className="w-4 h-4" />
+              Get Quote
+            </Link>
           </div>
 
           {/* Mobile Button */}
@@ -93,6 +104,16 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+
+              {/* Mobile Get Quote */}
+              <Link
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="mt-6 flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold"
+              >
+                <Sparkles className="w-4 h-4" />
+                Get Quote
+              </Link>
             </motion.div>
           </>
         )}

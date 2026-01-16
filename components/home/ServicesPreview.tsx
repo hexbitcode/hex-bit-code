@@ -1,7 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Code, Globe, Palette, Database } from "lucide-react";
+import {
+  Code,
+  Globe,
+  Palette,
+  Database,
+} from "lucide-react";
 
 const services = [
   {
@@ -48,14 +54,16 @@ export default function ServicesPreview() {
       id="services"
       className="relative py-16 md:py-24 bg-linear-to-b from-gray-900 to-black overflow-hidden"
     >
-      <div className="container mx-auto">
+      {/* ✅ FIXED CONTAINER */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14 px-4"
+          className="text-center mb-14"
         >
           <h2 className="font-bold text-4xl md:text-5xl mb-4">
             <span className="text-white">What We </span>
@@ -64,13 +72,13 @@ export default function ServicesPreview() {
             </span>
           </h2>
 
-          <p className="text-gray-400 max-w-3xl mx-auto">
-            Comprehensive digital solutions tailored to transform your business.
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Comprehensive digital solutions tailored to transform your business and drive growth in the modern landscape.
           </p>
         </motion.div>
 
-        {/* ✅ SERVICES GRID — LEFT + RIGHT GAP */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-10 md:px-20 lg:px-32">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service) => (
             <motion.div
               key={service.title}
@@ -81,12 +89,10 @@ export default function ServicesPreview() {
               whileHover={{ y: -8 }}
               className="group relative"
             >
-              {/* Glow */}
               <div
                 className={`absolute -inset-0.5 bg-linear-to-r ${service.linear} rounded-2xl blur opacity-0 group-hover:opacity-30 transition`}
               />
 
-              {/* Card */}
               <div className="relative bg-gray-900/60 border border-gray-800 rounded-2xl p-6 h-full">
                 <div
                   className={`inline-flex p-3 rounded-xl bg-linear-to-br ${service.linear} mb-5 text-white`}
@@ -117,6 +123,26 @@ export default function ServicesPreview() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-16"
+        >
+          <div className="inline-flex flex-col sm:flex-row gap-4">
+            <button className="px-8 py-4 bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:scale-105 transition">
+              Get Custom Quote
+            </button>
+
+            <button className="px-8 py-4 bg-gray-800/50 border border-gray-700 text-white font-semibold rounded-xl">
+              View All Services
+            </button>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

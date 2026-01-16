@@ -77,11 +77,11 @@ export default function Newsletter() {
     ];
 
     return (
-        <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-b from-black to-gray-900">
+        <section className="relative py-16 md:py-24 overflow-hidden bg-linear-to-b from-black to-gray-900">
             {/* Background Elements */}
             <div className="absolute inset-0">
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent"></div>
+                <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-cyan-500/30 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-purple-500/30 to-transparent"></div>
 
                 {/* Animated Grid */}
                 <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-[0.03]"></div>
@@ -124,7 +124,7 @@ export default function Newsletter() {
                 >
                     {/* Header */}
                     <motion.div variants={itemVariants} className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 mb-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 mb-6">
                             <Mail className="w-4 h-4 text-cyan-400" />
                             <span className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">
                                 Newsletter
@@ -133,7 +133,7 @@ export default function Newsletter() {
 
                         <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl mb-4">
                             <span className="text-white">Stay </span>
-                            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                            <span className="bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                                 Updated
                             </span>
                         </h2>
@@ -148,7 +148,7 @@ export default function Newsletter() {
                         <form onSubmit={handleSubmit} className="relative max-w-2xl mx-auto">
                             {/* Form Container with Glow */}
                             <div className="relative">
-                                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                                <div className="absolute -inset-1 bg-linear-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
 
                                 <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-2 flex flex-col sm:flex-row gap-2">
                                     <div className="flex-1">
@@ -172,8 +172,8 @@ export default function Newsletter() {
                                         type="submit"
                                         disabled={isSubmitting || isSubmitted}
                                         className={`px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${isSubmitted
-                                                ? "bg-gradient-to-r from-green-500 to-emerald-600"
-                                                : "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
+                                                ? "bg-linear-to-r from-green-500 to-emerald-600"
+                                                : "bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
                                             } ${isSubmitting ? "cursor-not-allowed opacity-80" : "hover:shadow-2xl hover:shadow-cyan-500/25"}`}
                                         whileHover={{ scale: isSubmitting || isSubmitted ? 1 : 1.05 }}
                                         whileTap={{ scale: 0.98 }}
@@ -243,7 +243,7 @@ export default function Newsletter() {
                                     whileHover={{ scale: 1.05 }}
                                     className="flex items-center gap-3 px-4 py-3 bg-gray-800/30 rounded-xl backdrop-blur-sm border border-gray-800"
                                 >
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/10 to-purple-500/10">
+                                    <div className="p-2 rounded-lg bg-linear-to-br from-cyan-500/10 to-purple-500/10">
                                         <div className="text-cyan-400">
                                             {benefit.icon}
                                         </div>
