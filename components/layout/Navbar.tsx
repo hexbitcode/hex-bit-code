@@ -59,7 +59,7 @@ export default function Navbar() {
               className="ml-2 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/20"
             >
               <Sparkles className="w-4 h-4" />
-              Get Quote
+              Get a Quote
             </Link>
           </div>
 
